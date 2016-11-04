@@ -10,16 +10,20 @@ static class Book {
   int pages;
 
 // 생성자가 단 하나라도 있으면 기본 생성자를 만들어주지 않는다.
-  Book(String title) {
+  Book(String title, int price) {
     System.out.println("Book(String) 호출");
   }
 }
 
    public static void main(String[] args) {
-// Book b1 = new Book(); 기본 생성자가 없어서 컴파일 오류
-Book b2 = new Book("하하하");
+Book b1 = Book("하하");
+Book b2 = Book(2000);
 
-Book b2 = new Book; // 컴파일 오류, 생성자 호출 없이 인스턴스 만들수 없다.
+
+System.out.println(b1);
+System.out.println(b2);
+
+// Book b2 = new Book; // 컴파일 오류, 생성자 호출 없이 인스턴스 만들수 없다.
                     // 생성자 호출은 필수
 }
 
